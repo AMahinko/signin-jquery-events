@@ -2,7 +2,8 @@
 $('.signin').click(loginFadeIn);
 $('.close').click(loginFadeOut);
 $('.submit').click(errorist);
-$('input').mouseover(derrorist);
+$('[name~=user]').mouseover(derroristUser);
+$('[name~=pass]').mouseover(derroristPass);
 $('.modal').click(function(x){
   if ($(x.target).is('button')) {
     console.log("false");
@@ -31,6 +32,10 @@ function errorist(){
   $('input').addClass('error')
 }
 
-function derrorist(){
-  $('input').removeClass('error');
+function derroristUser(){
+  $('[name~=user]').removeClass('error');
+}
+
+function derroristPass(){
+  $('[name~=pass]').removeClass('error');
 }
