@@ -3,6 +3,15 @@ $('.signin').click(loginFadeIn);
 $('.close').click(loginFadeOut);
 $('.submit').click(errorist);
 $('input').mouseover(derrorist);
+$('.modal').click(function(x){
+  if ($(x.target).is('button')) {
+    console.log("false");
+    return false;
+  }
+  else {
+    loginFadeOut();
+  }
+});
 
 
 
